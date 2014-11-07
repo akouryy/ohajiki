@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="350px" height="350px" id="stage_svg" >
+	<circle cx="175px" cy="175px" r="175px" fill="blue"  />
+	<circle cx="175px" cy="175px" r="125px" fill="white" />
+	<circle cx="175px" cy="175px" r="75px"  fill="red"   />
+	<circle cx="175px" cy="175px" r="25px"  fill="white" />
+</svg>

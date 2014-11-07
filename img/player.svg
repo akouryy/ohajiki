@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100px" height="100px" id="player_svg" >
+	<g fill="white">
+		<circle cx="50px" cy="25px" r="15px"/>
+		<polygon points="35, 45, 65, 45, 80, 90, 20, 90" />
+	</g>
+</svg>

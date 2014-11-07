@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100px" height="100px" id="player_svg" >
+	<g fill="white">
+		<polygon points="35, 10, 65, 10, 65, 40, 35, 40" />
+		<polygon points="25, 45, 75, 45, 75, 90, 25, 90" />
+<!--		<circle cx="50px" cy="45px" r="5px"/>
+		<circle cx="20px" cy="15px" r="5px"/>
+		<circle cx="10px" cy="75px" r="5px"/>
+		<circle cx="80px" cy="90px" r="5px"/>
+		<circle cx="75px" cy="20px" r="5px"/>
+	</g>
+	<g fill="none" stroke="white">
+		<line x1="50" y1="45" x2="20" y2="15" />
+		<line x1="50" y1="45" x2="10" y2="75" />
+		<line x1="50" y1="45" x2="80" y2="90" />
+		<line x1="50" y1="45" x2="75" y2="20" />
+		<line x1="20" y1="15" x2="10" y2="75" />
+		<line x1="10" y1="75" x2="80" y2="90" />
+		<line x1="80" y1="90" x2="75" y2="20" />
+		<line x1="75" y1="20" x2="20" y2="15" />
+-->
+	</g>
+</svg>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="/lib/jquery.js"></script>
+		<script type="text/javascript" src="/lib/jquery-easing.js"></script>
+		<script type="text/javascript" src="/lib/paper.js"></script>
+		<script type="text/javascript" src="/lib/seedrandom.js"></script>
+		<script type="text/javascript" src="/lib/helper.js"></script>
+		<script type="text/javascript" src="monitor.js"></script>
+		<link rel="stylesheet" href="monitor.css" />
+		<title>NPCA Ohajiki - Monitor</title>
+	</head>
+	<body id="waiting">
+		<main>
+			<svg id="stage-circle" viewbox="0 0 1400 1400">
+				<circle cx="700px" cy="700px" r="700px" fill="blue"  />
+				<circle cx="700px" cy="700px" r="500px" fill="white" />
+				<circle cx="700px" cy="700px" r="300px" fill="red"   />
+				<circle cx="700px" cy="700px" r="100px" fill="white" />
+			</svg>
+			<div class="stage-view"></div>
+		</main>
+		<aside>
+			<h1>NPCA Ohajiki</h1>
+			<small id="i">info</small>
+			<h2 id="sec" class="value-none"><span class="value">0</span>sec</h2>
+			<div class="user" id="u0">
+				<div class="user-data">
+					<div class="user-image"></div>
+					<h1 class="user-type no-p">
+						<span class="rank"><span class="value">0</span><span class="th">th</span></span
+						><span class="user-num">1</span>: <span class="value">Waiting...</span>
+					</h1>
+					<h2 class="user-stone"><span class="value"></span> stone<span class="hukusu">s</span></h2>
+					<h2 class="user-score"><span class="value"></span> pts</h2>
+				</div>
+			</div>
+			<div class="user" id="u1">
+				<div class="user-data">
+					<div class="user-image"></div>
+					<h1 class="user-type no-p">
+						<span class="rank"><span class="value">0</span><span class="th">th</span></span
+						><span class="user-num">2</span>: <span class="value">Waiting...</span>
+					</h1>
+					<h2 class="user-stone"><span class="value"></span> stone<span class="hukusu">s</span></h2>
+					<h2 class="user-score"><span class="value"></span> pts</h2>
+				</div>
+			</div>
+			<div class="user" id="u2">
+				<div class="user-data">
+					<div class="user-image"></div>
+					<h1 class="user-type no-p">
+						<span class="rank"><span class="value">0</span><span class="th">th</span></span
+						><span class="user-num">3</span>: <span class="value">Waiting...</span>
+					</h1>
+					<h2 class="user-stone"><span class="value"></span> stone<span class="hukusu">s</span></h2>
+					<h2 class="user-score"><span class="value"></span> pts</h2>
+				</div>
+			</div>
+			<div class="user" id="u3">
+				<div class="user-data">
+					<div class="user-image"></div>
+					<h1 class="user-type no-p">
+						<span class="rank"><span class="value">0</span><span class="th">th</span></span
+						><span class="user-num">4</span>: <span class="value">Waiting...</span>
+					</h1>
+					<h2 class="user-stone"><span class="value"></span> stone<span class="hukusu">s</span></h2>
+					<h2 class="user-score"><span class="value"></span> pts</h2>
+				</div>
+			</div>
+			<div id="info-container">
+				<article id="info">
+					<h1>Information</h1>
+					<div id="links">
+						<a href="http://pyonpyon.club/" title="pyonpyon.club" target="_blank">NPCA</a>
+						<a href="http://github.com/akouryy/ohajiki" title="github.com/akouryy/ohajiki" target="_blank">Github</a>
+					</div>
+					<section>
+						<h2>monitor</h2>
+						akouryy
+						<ul>
+							<li>HTML</li>
+							<li>Stylus</li>
+							<li>CoffeeScript</li>
+							<li>Socket.IO</li>
+							<li>SVG/jQuery</li>
+							<li>&nbsp;</li>
+							<li>&nbsp;</li>
+							<li>font: M+ 2p</li>
+						</ul>
+					</section>
+					<section>
+						<h2>server</h2>
+						potetisensei
+						<ul>
+							<li>JavaScript</li>
+							<li>node.js</li>
+							<li>Socket.IO</li>
+						</ul>
+					</section>
+					<section>
+						<h2>client (mobile)</h2>
+						potetisensei
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JavaScript</li>
+							<li>Socket.IO</li>
+							<li>Canvas/Paper.js</li>
+						</ul>
+					</section>
+				</article>
+			</div>
+		</aside>
+		<div id="none">
+    		<svg width="100" height="100" class="wait">
+				<circle class="out-ring or0" stroke-width="3" fill="none" cx="50" cy="50" r="45"/>
+				<circle class="out-ring or1" stroke-width="3" fill="none" cx="50" cy="50" r="45"/>
+				<circle class="out-ring or2" stroke-width="3" fill="none" cx="50" cy="50" r="45"/>
+				<circle class="out-ring or3" stroke-width="3" fill="none" cx="50" cy="50" r="45"/>
+			</svg>
+			<svg width="100" height="100" class="ai-svg">
+				<g>
+					<polygon points="35, 10, 65, 10, 65, 40, 35, 40"/>
+					<polygon points="25, 45, 75, 45, 75, 90, 25, 90"/>
+				</g>
+			</svg>
+			<svg width="100px" height="100px" class="player-svg">
+				<g>
+					<circle cx="50px" cy="25px" r="15px"/>
+					<polygon points="35, 45, 65, 45, 80, 90, 20, 90"/>
+				</g>
+			</svg>
+			<svg viewbox="0 0 100 100" class="stone invisible"> <!-- style="display: none"> -->
+				<circle cx="50" cy="50" r="45"/>
+			</svg>
+		</div>
+	</body>
+</html>
