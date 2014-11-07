@@ -1,6 +1,6 @@
-# NPCA Curling
+# NPCA Ohajiki
 
-2014年文化祭展示
+2014年KOF展示
 
 ## 処理の流れ
 
@@ -34,4 +34,4 @@ reconnect  |----------|------------|-----------|-------|    |  |
 
 ### イベント一覧
 
-[protocol.md](https://gitlab.npca.jp/poteticalbee/curling/blob/master/protocol.md)参照
+[protocol.md](https://github.com/akouryy/ohajiki/blob/master/protocol.md)参照
